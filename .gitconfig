@@ -1,0 +1,28 @@
+[user]
+	name = quambene
+	email = contact.quambene@gmail.com
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    features = side-by-side line-numbers decorations
+    syntax-theme = GitHub
+[delta "decorations"]
+    file-style = bold
+    file-decoration-style = box
+    hunk-header-style = omit
+[pull]
+    ff = only
+[merge]
+    ff = no
+    commit = no
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
