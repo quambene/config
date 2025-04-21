@@ -39,10 +39,10 @@ cargo install git-delta # Install git-delta
 
 ``` bash
 # Export profile
-dconf dump /org/gnome/terminal/ > gnome_terminal.txt
+dconf dump /org/gnome/terminal/ > gnome_terminal/profiles.txt
 
 # Import profile
-dconf load /org/gnome/terminal/ < gnome_terminal.txt
+dconf load /org/gnome/terminal/ < gnome_terminal/profiles.txt
 ```
 
 ## Set up Helix
