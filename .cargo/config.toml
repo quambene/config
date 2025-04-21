@@ -1,0 +1,9 @@
+# Global config in ~/.cargo
+
+[target.x86_64-unknown-linux-gnu]
+# Use lld linker instead of default linker
+rustflags = ["-C", "link-arg=-fuse-ld=lld"]
+
+[profile.dev]
+# Less debug info but still providing line numbers
+debug = "line-tables-only"
