@@ -2,7 +2,7 @@
 
 # Config
 
-Config for git, tmux, rust, helix, etc.
+Config for git, tmux, cargo, helix, etc.
 
 - [Set up config](#set-up-config)
 - [Set up git](#set-up-git)
@@ -16,12 +16,14 @@ rm "$HOME/.bash_aliases"
 rm "$HOME/.profile"
 rm "$HOME/.gitconfig"
 rm "$HOME/.tmux.conf"
+rm "$HOME/.cargo/config.toml"
 mkdir "$HOME/.config/helix"
 
 ln -sv "$HOME/config/.bash_aliases" "$HOME"
 ln -sv "$HOME/config/.profile" "$HOME"
 ln -sv "$HOME/config/.gitconfig" "$HOME"
 ln -sv "$HOME/config/.tmux.conf" "$HOME"
+ln -sv "$HOME/config/.cargo/config.toml" "$HOME/.cargo/config.toml"
 ln -sv "$HOME/config/helix/config.toml" "$HOME/.config/helix"
 ln -sv "$HOME/config/helix/languages.toml" "$HOME/.config/helix"
 ```
