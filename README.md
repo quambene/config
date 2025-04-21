@@ -1,6 +1,6 @@
 # Config
 
-Config files for git, tmux, rust, helix, etc.
+Config for git, tmux, rust, helix, etc.
 
 - [Requirements](#requirements)
 
