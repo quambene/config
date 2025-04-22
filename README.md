@@ -4,10 +4,22 @@
 
 Config for git, tmux, cargo, helix, etc.
 
+- [Requirements](#requirements)
 - [Set up config](#set-up-config)
-- [Set up git](#set-up-git)
 - [Set up terminal](#set-up-terminal)
 - [Set up Helix](#set-up-helix)
+
+## Requirements
+
+- `xclip`: use xclip in tmux
+- `meld`: use meld as diff and merge tool in git
+- `git-delta`: use delta instead of less as default pager in git for `git diff`,
+  `git show`, etc.
+
+``` bash
+sudo apt install -y xclip meld
+cargo install git-delta
+```
 
 ## Set up config
 
@@ -28,13 +40,6 @@ ln -sv "$HOME/config/helix/config.toml" "$HOME/.config/helix"
 ln -sv "$HOME/config/helix/languages.toml" "$HOME/.config/helix"
 ```
 
-## Set up git
-
-``` bash
-sudo apt install meld # Install meld
-cargo install git-delta # Install git-delta
-```
-
 ## Set up terminal
 
 ``` bash
@@ -52,6 +57,7 @@ git clone https://github.com/helix-editor/helix
 cd helix
 cargo install --path helix-term --locked
 ln -Ts $PWD/runtime ~/.config/helix/runtime
+rustup component add rust-analyzer # Install language server
 
 hx --health # Check installation
 hx --health rust # Check configuration for rust
