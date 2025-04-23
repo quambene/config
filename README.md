@@ -25,19 +25,26 @@ cargo install git-delta
 
 ``` bash
 rm "$HOME/.bash_aliases"
-rm "$HOME/.profile"
-rm "$HOME/.gitconfig"
-rm "$HOME/.tmux.conf"
-rm "$HOME/.cargo/config.toml"
-mkdir "$HOME/.config/helix"
-
 ln -sv "$HOME/config/.bash_aliases" "$HOME"
+
+rm "$HOME/.profile"
 ln -sv "$HOME/config/.profile" "$HOME"
+
+rm "$HOME/.gitconfig"
 ln -sv "$HOME/config/.gitconfig" "$HOME"
+
+rm "$HOME/.tmux.conf"
 ln -sv "$HOME/config/.tmux.conf" "$HOME"
+
+rm "$HOME/.cargo/config.toml"
 ln -sv "$HOME/config/.cargo/config.toml" "$HOME/.cargo/config.toml"
+
+mkdir "$HOME/.config/helix"
 ln -sv "$HOME/config/helix/config.toml" "$HOME/.config/helix"
 ln -sv "$HOME/config/helix/languages.toml" "$HOME/.config/helix"
+
+rm "$HOME/.config/zed/settings.json"
+ln -sv "$HOME/dotfiles/zed/settings.json" "$HOME/.config/zed"
 ```
 
 ## Set up terminal
