@@ -2,12 +2,13 @@
 
 # Config
 
-Config for git, tmux, cargo, helix, etc.
+Config for git, tmux, cargo, helix, vs code, etc.
 
 - [Requirements](#requirements)
 - [Set up config](#set-up-config)
 - [Set up terminal](#set-up-terminal)
 - [Set up Helix](#set-up-helix)
+- [Set up VS Code](#set-up-vs-code)
 
 ## Requirements
 
@@ -24,27 +25,42 @@ cargo install git-delta
 ## Set up config
 
 ``` bash
+# bash
 rm "$HOME/.bash_aliases"
 ln -sv "$HOME/config/.bash_aliases" "$HOME"
 
+# shell
 rm "$HOME/.profile"
 ln -sv "$HOME/config/.profile" "$HOME"
 
+# git
 rm "$HOME/.gitconfig"
 ln -sv "$HOME/config/.gitconfig" "$HOME"
 
+# tmux
 rm "$HOME/.tmux.conf"
 ln -sv "$HOME/config/.tmux.conf" "$HOME"
 
+# cargo
 rm "$HOME/.cargo/config.toml"
-ln -sv "$HOME/config/.cargo/config.toml" "$HOME/.cargo/config.toml"
+ln -sv "$HOME/config/cargo/config.toml" "$HOME/.cargo/config.toml"
 
+# helix
 mkdir "$HOME/.config/helix"
 ln -sv "$HOME/config/helix/config.toml" "$HOME/.config/helix"
 ln -sv "$HOME/config/helix/languages.toml" "$HOME/.config/helix"
 
+# zed
 rm "$HOME/.config/zed/settings.json"
-ln -sv "$HOME/dotfiles/zed/settings.json" "$HOME/.config/zed"
+ln -sv "$HOME/config/zed/settings.json" "$HOME/.config/zed"
+
+# vs code
+rm "$HOME/.config/Code/User/settings.json"
+rm "$HOME/.config/Code/User/keybindings.json"
+rm "$HOME/.config/Code/User/snippets.json"
+ln -sv "$HOME/config/vscode/settings.json" "$HOME/.config/Code/User/settings.json"
+ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
+ln -sv "$HOME/config/vscode/snippets" "$HOME/.config/Code/User/snippets"
 ```
 
 ## Set up terminal
@@ -68,4 +84,17 @@ rustup component add rust-analyzer # Install language server
 
 hx --health # Check installation
 hx --health rust # Check configuration for rust
+```
+
+## Set up VS Code
+
+``` bash
+# Export extensions
+code --list-extensions > vscode/extensions.txt
+
+# Install extensions
+xargs -n 1 code --install-extension < vscode/extensions.txt
+
+# Update extensions
+code --update-extensions
 ```
