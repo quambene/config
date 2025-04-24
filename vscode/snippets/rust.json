@@ -1,0 +1,47 @@
+{
+    "Insert test": {
+        "prefix": "test",
+        "body": [
+            "#[cfg(test)]",
+            "mod tests {",
+            "\tuse super::*;",
+            "",
+            "\t#[test]",
+            "\tfn test_$0() {",
+            "\t\t",
+            "\t}",
+            "}"
+        ],
+        "description": "test (rust)"
+    },
+    "Insert inline code block": {
+        "prefix": "inline-code-block",
+        "body": [
+            "`$0`"
+        ],
+        "description": "Incline code block"
+    },
+    "Insert code block (bash)": {
+        "prefix": "code-block",
+        "body": [
+            "``` bash",
+            "/// $0",
+            "/// ```"
+        ],
+        "description": "Code block (bash)"
+    },
+    "Insert doc link": {
+        "prefix": "doc-link",
+        "body": [
+            "[`$0`]()"
+        ],
+        "description": "Doc link (rust)"
+    },
+    "Insert print statement": {
+        "prefix": "print",
+        "body": [
+            "println!(\"res: {:#?}\", res);"
+        ],
+        "description": "Insert print statement (rust)"
+    }
+}

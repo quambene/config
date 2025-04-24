@@ -1,0 +1,40 @@
+{
+    "Insert main": {
+        "prefix": "main",
+        "body": [
+            "def main():",
+            "\t$0",
+            "",
+            "if __name__ == \"__main__\":",
+            "\tmain()"
+        ],
+        "description": "main (python)"
+    },
+    "Insert class": {
+        "prefix": "class",
+        "body": [
+            "class $0MyClass:",
+            "\t",
+            "\tdef __init__(self):",
+            "\t\t"
+        ],
+        "description": "class (python)"
+    },
+    "Insert timer": {
+        "prefix": "timer",
+        "body": [
+            "import time",
+            "from typing import Any",
+            "",
+            "def timer(func: Any) -> Any:",
+                "\tdef wrapper(*args: Any, **kwargs: Any) -> Any:",
+                    "\t\tstart = int(time.time() * 1000)",
+                    "\t\tres = func(*args, **kwargs)",
+                    "\t\tend = int(time.time() * 1000)",
+                    "\t\tprint(f\"Computation time for function '{func.__name__}': {end - start} ms\")",
+                    "\t\treturn res",
+                "\treturn wrapper"
+        ],
+        "description": "timer decorator (python)"
+    }
+}

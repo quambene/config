@@ -1,0 +1,87 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.snippetSuggestions": "top",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.inlayHints.enabled": "on",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 140,
+    "editor.minimap.enabled": false,
+    "editor.dragAndDrop": false,
+    "editor.detectIndentation": false,
+    "editor.suggestSelection": "first",
+    "editor.codeLens": true,
+    "workbench.editor.wrapTabs": false,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Default Light+",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file"
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off",
+        "editor.inlayHints.enabled": "on"
+    },
+    "[vue]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[xml]": {
+        "editor.wordWrapColumn": 160
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.wordWrap": "on"
+    },
+    "python.experiments.enabled": false,
+    "python.terminal.activateEnvironment": false,
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "mypy-type-checker.args": [
+        "--strict"
+    ],
+    "rust-analyzer.imports.granularity.enforce": true,
+    "rust-analyzer.imports.granularity.group": "crate",
+    "rust-analyzer.inlayHints.parameterHints.enable": true,
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "always",
+    "rust-analyzer.check.command": "check",
+    "dart.debugExternalLibraries": false,
+    "dart.debugSdkLibraries": false,
+    "dart.openDevTools": "never",
+    "dart.previewFlutterUiGuides": true,
+    "dart.previewLsp": true,
+    "dart.debugExternalPackageLibraries": false,
+    "dart.previewUpdateImportsOnRename": true
+}

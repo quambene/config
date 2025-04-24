@@ -1,0 +1,38 @@
+{
+    "Insert inline code block": {
+        "prefix": "inline-code-block",
+        "body": [
+            "`$0`"
+        ],
+        "description": "Code block (bash)"
+    },
+    "Insert code block (bash)": {
+        "prefix": "bash-code-block",
+        "body": [
+            "``` bash",
+            "$0",
+            "```"
+        ],
+        "description": "Code block (bash)"
+    },
+    "Insert code block (sql)": {
+        "prefix": "sql-code-block",
+        "body": [
+            "``` sql",
+            "$0",
+            "```"
+        ],
+        "description": "Code block (sql)"
+    },
+    "Insert diagram (top-down)": {
+        "prefix": "diagram-top-down",
+        "body": [
+            "``` mermaid",
+            "graph TD",
+            "\tid1[id1]-->id2[id2]",
+            "\tid2-->id3[id3]",
+            "```"
+        ],
+        "description": "Diagram (top-down)"
+    }
+}

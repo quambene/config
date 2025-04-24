@@ -1,0 +1,5 @@
+localizely.flutter-intl
+yzhang.markdown-all-in-one
+bierner.markdown-preview-github-styles
+stkb.rewrap
+vscode-icons-team.vscode-icons
