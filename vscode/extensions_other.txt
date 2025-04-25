@@ -3,4 +3,5 @@ timonwong.shellcheck
 yzhang.markdown-all-in-one
 bierner.markdown-preview-github-styles
 stkb.rewrap
+gruntfuggly.todo-tree
 vscode-icons-team.vscode-icons
