@@ -41,6 +41,9 @@ ln -sv "$HOME/config/.gitconfig" "$HOME"
 rm "$HOME/.tmux.conf"
 ln -sv "$HOME/config/.tmux.conf" "$HOME"
 
+# yazi
+ln -sv "$HOME/config/yazi/theme.toml" "$HOME/.config/yazi"
+
 # cargo
 rm "$HOME/.cargo/config.toml"
 ln -sv "$HOME/config/cargo/config.toml" "$HOME/.cargo/config.toml"
