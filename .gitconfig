@@ -12,6 +12,10 @@
     file-style = bold
     file-decoration-style = box
     hunk-header-style = omit
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
 [pull]
     ff = only
 [merge]
