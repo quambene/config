@@ -24,14 +24,21 @@ cargo install git-delta
 
 ## Set up config
 
+Clone the repo into the home directory.
+
 ``` bash
-# bash
+# shell
 rm "$HOME/.bash_aliases"
 ln -sv "$HOME/config/.bash_aliases" "$HOME"
 
-# shell
+rm "$HOME/.bashrc"
+ln -sv "$HOME/config/.bashrc" "$HOME"
+
 rm "$HOME/.profile"
 ln -sv "$HOME/config/.profile" "$HOME"
+
+rm "$HOME/.zshrc"
+ln -sv "$HOME/config/.zshrc" "$HOME"
 
 # git
 rm "$HOME/.gitconfig"
