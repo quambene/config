@@ -13,9 +13,9 @@
     file-decoration-style = box
     hunk-header-style = omit
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [push]
-	autoSetupRemote = true
+    autoSetupRemote = true
 [pull]
     ff = only
 [merge]
