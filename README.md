@@ -29,24 +29,24 @@ Clone the repo into the home directory.
 ``` bash
 # shell
 rm "$HOME/.bash_aliases"
-ln -sv "$HOME/config/.bash_aliases" "$HOME"
+ln -sv "$HOME/config/shell/.bash_aliases" "$HOME"
 
 rm "$HOME/.bashrc"
-ln -sv "$HOME/config/.bashrc" "$HOME"
+ln -sv "$HOME/config/shell/.bashrc" "$HOME"
 
 rm "$HOME/.profile"
-ln -sv "$HOME/config/.profile" "$HOME"
+ln -sv "$HOME/config/shell/.profile" "$HOME"
 
 rm "$HOME/.zshrc"
-ln -sv "$HOME/config/.zshrc" "$HOME"
+ln -sv "$HOME/config/shell/.zshrc" "$HOME"
 
 # git
 rm "$HOME/.gitconfig"
-ln -sv "$HOME/config/.gitconfig" "$HOME"
+ln -sv "$HOME/config/git/.gitconfig" "$HOME"
 
 # tmux
 rm "$HOME/.tmux.conf"
-ln -sv "$HOME/config/.tmux.conf" "$HOME"
+ln -sv "$HOME/config/tmux/.tmux.conf" "$HOME"
 
 # yazi
 ln -sv "$HOME/config/yazi/theme.toml" "$HOME/.config/yazi"
