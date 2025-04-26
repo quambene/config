@@ -19,7 +19,9 @@ Config for git, tmux, cargo, helix, vs code, etc.
 
 ``` bash
 sudo apt install -y xclip meld
-cargo install git-delta
+cargo install git-delta # syntax-highlighting pager for diffs
+cargo install fd-find # alternative for find
+cargo install skim # fuzzy finder
 ```
 
 ## Set up config
