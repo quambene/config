@@ -40,9 +40,6 @@ ln -sv "$HOME/config/shell/.bashrc" "$HOME"
 rm "$HOME/.profile"
 ln -sv "$HOME/config/shell/.profile" "$HOME"
 
-rm "$HOME/.zshrc"
-ln -sv "$HOME/config/shell/.zshrc" "$HOME"
-
 # skim
 ln -sv "$HOME/config/skim" "$HOME/.skim"
 
@@ -82,6 +79,13 @@ ln -sv "$HOME/config/vscode/snippets" "$HOME/.config/Code/User/snippets"
 ## Set up config on macOS
 
 ``` bash
+# shell
+rm "$HOME/.zshrc"
+ln -sv "$HOME/config/shell/.zshrc" "$HOME"
+
+rm "$HOME/.inputrc"
+ln -sv "$HOME/config/shell/.inputrc" "$HOME"
+
 # vs code
 rm "$HOME/Library/Application Support/Code/User/settings.json"
 rm "$HOME/Library/Application Support/Code/User/keybindings.json"
