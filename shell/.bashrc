@@ -15,7 +15,11 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# aliases
+# Source aliases
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Source bindings and completion for skim
+[ -f ~/.skim/key-bindings.bash ] && source ~/.skim/key-bindings.bash
+[ -f ~/.skim/completion.bash ] && source ~/.skim/completion.bash
