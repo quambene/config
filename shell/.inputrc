@@ -1,0 +1,8 @@
+# make tab completion case-insensitive
+set completion-ignore-case on
+
+# show all completions after pressing tab once (instead of twice)
+set show-all-if-ambiguous on
+
+# cycle through different possible completions
+TAB: menu-complete
