@@ -5,7 +5,8 @@
 Config for git, tmux, cargo, helix, vs code, etc.
 
 - [Requirements](#requirements)
-- [Set up config](#set-up-config)
+- [Set up config on Linux](#set-up-config-on-linux)
+- [Set up config on macOS](#set-up-config-on-macos)
 - [Set up terminal](#set-up-terminal)
 - [Set up Helix](#set-up-helix)
 - [Set up VS Code](#set-up-vs-code)
@@ -24,7 +25,7 @@ cargo install fd-find # alternative for find
 cargo install skim # fuzzy finder
 ```
 
-## Set up config
+## Set up config on Linux
 
 Clone the repo into the home directory.
 
@@ -76,6 +77,18 @@ rm "$HOME/.config/Code/User/snippets.json"
 ln -sv "$HOME/config/vscode/settings.json" "$HOME/.config/Code/User/settings.json"
 ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/.config/Code/User/keybindings.json"
 ln -sv "$HOME/config/vscode/snippets" "$HOME/.config/Code/User/snippets"
+```
+
+## Set up config on macOS
+
+``` bash
+# vs code
+rm "$HOME/Library/Application Support/Code/User/settings.json"
+rm "$HOME/Library/Application Support/Code/User/keybindings.json"
+rm "$HOME/Library/Application Support/Code/User/snippets.json"
+ln -sv "$HOME/config/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+ln -sv "$HOME/config/vscode/snippets" "$HOME/Library/Application Support/Code/User/snippets"
 ```
 
 ## Set up terminal
