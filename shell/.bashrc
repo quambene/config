@@ -20,6 +20,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Source bindings and completion for skim
+# Source key bindings and completion for skim
 [ -f ~/.skim/key-bindings.bash ] && source ~/.skim/key-bindings.bash
 [ -f ~/.skim/completion.bash ] && source ~/.skim/completion.bash
