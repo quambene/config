@@ -42,6 +42,9 @@ ln -sv "$HOME/config/shell/.profile" "$HOME"
 rm "$HOME/.zshrc"
 ln -sv "$HOME/config/shell/.zshrc" "$HOME"
 
+# skim
+ln -sv "$HOME/config/skim" "$HOME/.skim"
+
 # git
 rm "$HOME/.gitconfig"
 ln -sv "$HOME/config/git/.gitconfig" "$HOME"
