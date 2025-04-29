@@ -17,12 +17,15 @@ Config for git, tmux, cargo, helix, vs code, etc.
 - `meld`: use meld as diff and merge tool in git
 - `git-delta`: use delta instead of less as default pager in git for `git diff`,
   `git show`, etc.
+- `fzf`: fuzzy finder
 
 ``` bash
-sudo apt install -y xclip meld
-cargo install git-delta # syntax-highlighting pager for diffs
-cargo install fd-find # alternative for find
-cargo install skim # fuzzy finder
+sudo apt install -y xclip meld fzf
+
+cargo install git-delta --locked # syntax-highlighting pager for diffs
+cargo install fd-find --locked # alternative for find
+cargo install skim --locked # fuzzy finder
+cargo install zoxide --locked # z and zi as alternative for cd
 ```
 
 ## Set up config on Linux
@@ -42,6 +45,9 @@ ln -sv "$HOME/config/shell/.profile" "$HOME"
 
 # skim
 ln -sv "$HOME/config/skim" "$HOME/.skim"
+
+# zoxide
+ln -sv "$HOME/config/zoxide" "$HOME/.zoxide"
 
 # git
 rm "$HOME/.gitconfig"
