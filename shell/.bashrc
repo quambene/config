@@ -23,3 +23,6 @@ fi
 # Source key bindings and completion for skim
 [ -f ~/.skim/key-bindings.bash ] && source ~/.skim/key-bindings.bash
 [ -f ~/.skim/completion.bash ] && source ~/.skim/completion.bash
+
+# Source z and zi commands for skims
+[ -f ~/.zoxide/zoxide.bash ] && source ~/.zoxide/zoxide.bash
