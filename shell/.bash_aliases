@@ -3,11 +3,12 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# fuzzy search on all directories sorted by nesting (deepest directories last)
+# fuzzy search on all directories in home directory sorted by nesting (deepest
+# directories last)
 fdf() {
     local query="$1"
 
-    fd --type d --max-depth 4 2>/dev/null \
+    fd --type d --max-depth 4 . "$HOME" 2>/dev/null \
         | awk '{ print gsub("/", "/"), $0 }' \
         | sed 's|^\./||' \
         | sort -n \
