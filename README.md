@@ -26,6 +26,7 @@ cargo install git-delta --locked # syntax-highlighting pager for diffs
 cargo install fd-find --locked # alternative for find
 cargo install skim --locked # fuzzy finder
 cargo install zoxide --locked # z and zi as alternative for cd
+cargo install alacritty --locked # terminal emulator
 ```
 
 ## Set up config on Linux
