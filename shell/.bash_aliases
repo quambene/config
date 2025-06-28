@@ -29,6 +29,14 @@ cdf() {
     fi
 }
 
+# fuzzy search all local and remote branches
+git-checkout() {
+    git for-each-ref --format='%(refname:short)' refs/heads refs/remotes \
+        | grep -v '^HEAD' \
+        | sk \
+        | xargs -r git checkout
+}
+
 # open project in helix with fuzzy finder
 hxf() {
     # allow multiple arguments
