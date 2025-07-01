@@ -31,10 +31,18 @@ cdf() {
 
 # fuzzy search all local and remote branches
 git-checkout() {
-    git for-each-ref --format='%(refname:short)' refs/heads refs/remotes \
-        | grep -v '^HEAD' \
-        | sk \
-        | xargs -r git checkout
+    local branch
+    branch=$(git for-each-ref --format='%(refname:short)' refs/heads refs/remotes \
+                | grep -v '^HEAD$' \
+                | sk) || return
+
+    if [[ $branch == origin/* ]]; then
+        # Extract the remote branch
+        local remote_branch=${branch#origin/}
+        git checkout -t "origin/$remote_branch"
+    else
+        git checkout "$branch"
+    fi
 }
 
 # open project in helix with fuzzy finder
