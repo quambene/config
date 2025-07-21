@@ -31,10 +31,11 @@ cdf() {
 
 # fuzzy search all local and remote branches
 git-checkout() {
+    local query="$1"
     local branch
     branch=$(git for-each-ref --format='%(refname:short)' refs/heads refs/remotes \
                 | grep -v '^HEAD$' \
-                | sk) || return
+                | sk --exact --query="$query") || return
 
     if [[ $branch == origin/* ]]; then
         # Extract the remote branch
