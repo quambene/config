@@ -147,7 +147,7 @@ hx --health rust # Check configuration for rust
 code --list-extensions > vscode/extensions.txt
 
 # Install extensions
-xargs -n 1 code --install-extension < vscode/extensions.txt
+xargs -n 1 code --install-extension < vscode/extensions/rust.txt
 
 # Update extensions
 code --update-extensions

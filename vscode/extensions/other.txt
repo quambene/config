@@ -1,0 +1,4 @@
+timonwong.shellcheck
+stkb.rewrap
+gruntfuggly.todo-tree
+vscode-icons-team.vscode-icons
