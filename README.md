@@ -5,6 +5,8 @@
 Config for git, tmux, cargo, helix, vs code, etc.
 
 - [Requirements](#requirements)
+  - [Requirements on Linux](#requirements-on-linux)
+  - [Requirements on macOS](#requirements-on-macos)
 - [Set up config on Linux](#set-up-config-on-linux)
 - [Set up config on macOS](#set-up-config-on-macos)
 - [Set up terminal](#set-up-terminal)
@@ -20,7 +22,7 @@ Config for git, tmux, cargo, helix, vs code, etc.
 - `fzf`: fuzzy finder
 
 ``` bash
-sudo apt install -y xclip meld fzf
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh # Install rustup
 
 cargo install git-delta --locked # syntax-highlighting pager for diffs
 cargo install fd-find --locked # fd as alternative for find
@@ -29,20 +31,33 @@ cargo install zoxide --locked # z and zi as alternative for cd
 cargo install alacritty --locked # terminal emulator
 ```
 
+### Requirements on Linux
+
+``` bash
+sudo apt install -y tmux xclip meld fzf
+```
+
+### Requirements on macOS
+
+``` bash
+brew install bash tmux xclip fzf helix
+brew install --cask meld
+```
+
 ## Set up config on Linux
 
 Clone the repo into the home directory.
 
 ``` bash
-# shell
+# bash
 rm "$HOME/.bash_aliases"
-ln -sv "$HOME/config/shell/.bash_aliases" "$HOME"
+ln -sv "$HOME/config/shell/bash/.bash_aliases" "$HOME"
 
 rm "$HOME/.bashrc"
-ln -sv "$HOME/config/shell/.bashrc" "$HOME"
+ln -sv "$HOME/config/shell/bash/.bashrc" "$HOME"
 
 rm "$HOME/.profile"
-ln -sv "$HOME/config/shell/.profile" "$HOME"
+ln -sv "$HOME/config/shell/bash/.profile" "$HOME"
 
 # skim
 ln -sv "$HOME/config/skim" "$HOME/.skim"
@@ -86,12 +101,12 @@ ln -sv "$HOME/config/vscode/snippets" "$HOME/.config/Code/User/snippets"
 ## Set up config on macOS
 
 ``` bash
-# shell
+# zsh
 rm "$HOME/.zshrc"
-ln -sv "$HOME/config/shell/.zshrc" "$HOME"
+ln -sv "$HOME/config/shell/zsh/.zshrc" "$HOME"
 
 rm "$HOME/.inputrc"
-ln -sv "$HOME/config/shell/.inputrc" "$HOME"
+ln -sv "$HOME/config/shell/zsh/.inputrc" "$HOME"
 
 # vs code
 rm "$HOME/Library/Application Support/Code/User/settings.json"
