@@ -30,3 +30,8 @@
     prompt = false
 [difftool "meld"]
     cmd = meld "$LOCAL" "$REMOTE"
+### Use different emails for different repos
+# [includeIf "gitdir:~/private/"]
+#     path = ~/.gitconfig-private
+# [includeIf "gitdir:~/business/"]
+#     path = ~/.gitconfig-business
