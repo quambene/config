@@ -7,8 +7,9 @@ Config for git, tmux, cargo, helix, vs code, etc.
 - [Requirements](#requirements)
   - [Requirements on Linux](#requirements-on-linux)
   - [Requirements on macOS](#requirements-on-macos)
-- [Set up config on Linux](#set-up-config-on-linux)
-- [Set up config on macOS](#set-up-config-on-macos)
+- [Set up config](#set-up-config)
+  - [Set up config on Linux](#set-up-config-on-linux)
+  - [Set up config on macOS](#set-up-config-on-macos)
 - [Set up terminal](#set-up-terminal)
 - [Set up Helix](#set-up-helix)
 - [Set up VS Code](#set-up-vs-code)
@@ -42,9 +43,22 @@ sudo apt install -y tmux xclip meld fzf
 ``` bash
 brew install bash tmux xclip fzf helix
 brew install --cask meld
+brew install --cask vscodium
+brew install visual-studio-code
 ```
 
-## Set up config on Linux
+Useful applications:
+
+``` bash
+brew install --cask libreoffice # Install Libre Office
+brew install --cask caffeine # prevent mac to go to sleep
+brew install --cask rectangle # window management tool to snap and resize windows
+brew install --cask alt-tab # Alt+Tab style of switching between windows
+```
+
+## Set up config
+
+### Set up config on Linux
 
 Clone the repo into the home directory.
 
@@ -98,9 +112,22 @@ ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/.config/Code/User/keybindin
 ln -sv "$HOME/config/vscode/snippets" "$HOME/.config/Code/User/snippets"
 ```
 
-## Set up config on macOS
+### Set up config on macOS
 
 ``` bash
+# bash
+chsh -s /bin/bash # Make bash default shell
+echo $SHELL # Show current shell
+
+rm "$HOME/.bash_aliases"
+ln -sv "$HOME/config/shell/bash/.bash_aliases" "$HOME"
+
+rm "$HOME/.bashrc"
+ln -sv "$HOME/config/shell/bash/.bashrc" "$HOME"
+
+rm "$HOME/.profile"
+ln -sv "$HOME/config/shell/bash/.profile" "$HOME/.profile"
+
 # zsh
 rm "$HOME/.zshrc"
 ln -sv "$HOME/config/shell/zsh/.zshrc" "$HOME"
@@ -115,6 +142,14 @@ rm "$HOME/Library/Application Support/Code/User/snippets.json"
 ln -sv "$HOME/config/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 ln -sv "$HOME/config/vscode/snippets" "$HOME/Library/Application Support/Code/User/snippets"
+
+# vc codium
+rm "$HOME/Library/Application Support/VSCodium/User/settings.json"
+rm "$HOME/Library/Application Support/VSCodium/User/keybindings.json"
+rm "$HOME/Library/Application Support/VSCodium/User/snippets.json"
+ln -sv "$HOME/config/vscode/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
+ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/Library/Application Support/VSCodium/User/keybindings.json"
+ln -sv "$HOME/config/vscode/snippets" "$HOME/Library/Application Support/VSCodium/User/snippets"
 ```
 
 ## Set up terminal
@@ -147,7 +182,7 @@ hx --health rust # Check configuration for rust
 code --list-extensions > vscode/extensions.txt
 
 # Install extensions
-xargs -n 1 code --install-extension < vscode/extensions/rust.txt
+xargs -n 1 code --install-extension < "$HOME/config/vscode/extensions/rust.txt"
 
 # Update extensions
 code --update-extensions
