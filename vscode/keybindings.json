@@ -129,5 +129,9 @@
         "args": {
             "text": "cd '${fileDirname}'\u000D"
         }
+    },
+    {
+        "key": "ctrl+space",
+        "command": "editor.action.insertSnippet"
     }
 ]
