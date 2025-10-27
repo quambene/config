@@ -30,6 +30,7 @@ cargo install fd-find --locked # fd as alternative for find
 cargo install skim --locked # fuzzy finder
 cargo install zoxide --locked # z and zi as alternative for cd
 cargo install alacritty --locked # terminal emulator
+cargo install --git https://github.com/astral-sh/uv uv # package manager for python
 ```
 
 ### Requirements on Linux
