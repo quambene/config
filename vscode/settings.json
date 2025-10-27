@@ -83,5 +83,6 @@
     "dart.previewFlutterUiGuides": true,
     "dart.previewLsp": true,
     "dart.debugExternalPackageLibraries": false,
-    "dart.previewUpdateImportsOnRename": true
+    "dart.previewUpdateImportsOnRename": true,
+    "markdown.extension.toc.updateOnSave": false
 }
