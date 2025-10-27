@@ -139,7 +139,7 @@ ln -sv "$HOME/config/shell/zsh/.inputrc" "$HOME"
 # vs code
 rm "$HOME/Library/Application Support/Code/User/settings.json"
 rm "$HOME/Library/Application Support/Code/User/keybindings.json"
-rm "$HOME/Library/Application Support/Code/User/snippets.json"
+rm "$HOME/Library/Application Support/Code/User/snippets"
 ln -sv "$HOME/config/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
 ln -sv "$HOME/config/vscode/snippets" "$HOME/Library/Application Support/Code/User/snippets"
@@ -147,7 +147,7 @@ ln -sv "$HOME/config/vscode/snippets" "$HOME/Library/Application Support/Code/Us
 # vc codium
 rm "$HOME/Library/Application Support/VSCodium/User/settings.json"
 rm "$HOME/Library/Application Support/VSCodium/User/keybindings.json"
-rm "$HOME/Library/Application Support/VSCodium/User/snippets.json"
+rm "$HOME/Library/Application Support/VSCodium/User/snippets"
 ln -sv "$HOME/config/vscode/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
 ln -sv "$HOME/config/vscode/keybindings.json" "$HOME/Library/Application Support/VSCodium/User/keybindings.json"
 ln -sv "$HOME/config/vscode/snippets" "$HOME/Library/Application Support/VSCodium/User/snippets"
