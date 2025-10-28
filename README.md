@@ -83,6 +83,7 @@ ln -sv "$HOME/config/zoxide" "$HOME/.zoxide"
 # git
 rm "$HOME/.gitconfig"
 ln -sv "$HOME/config/git/.gitconfig" "$HOME"
+ln -sv "$HOME/config/git/git-completion.bash" "$HOME/.git-completion.bash"
 
 # tmux
 rm "$HOME/.tmux.conf"
