@@ -45,7 +45,7 @@ sudo apt install -y tmux xclip meld fzf
 brew install bash tmux xclip fzf helix
 brew install --cask meld
 brew install --cask vscodium
-brew install visual-studio-code
+brew install --cask visual-studio-code
 ```
 
 Useful applications:
@@ -55,6 +55,7 @@ brew install --cask libreoffice # Install Libre Office
 brew install --cask caffeine # prevent mac to go to sleep
 brew install --cask rectangle # window management tool to snap and resize windows
 brew install --cask alt-tab # Alt+Tab style of switching between windows
+brew install --cask karabiner-elements # remap shortcuts
 ```
 
 ## Set up config
@@ -65,14 +66,14 @@ Clone the repo into the home directory.
 
 ``` bash
 # bash
+rm "$HOME/.profile"
+ln -sv "$HOME/config/shell/.profile" "$HOME"
+
 rm "$HOME/.bash_aliases"
 ln -sv "$HOME/config/shell/bash/.bash_aliases" "$HOME"
 
 rm "$HOME/.bashrc"
 ln -sv "$HOME/config/shell/bash/.bashrc" "$HOME"
-
-rm "$HOME/.profile"
-ln -sv "$HOME/config/shell/bash/.profile" "$HOME"
 
 # skim
 ln -sv "$HOME/config/skim" "$HOME/.skim"
