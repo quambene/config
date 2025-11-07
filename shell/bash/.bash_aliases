@@ -111,6 +111,9 @@ alias list-snaps='snap list'
 alias show-firmware-updates='fwupdmgr get-updates'
 alias update-firmware='fwupdmgr update'
 
+# macos
+alias start_cafe='caffeinate -dims'
+
 # git
 alias merge-dev='git merge --no-ff --no-commit dev'
 alias merge-master='git merge --no-ff --no-commit master'
