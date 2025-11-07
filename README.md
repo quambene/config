@@ -122,6 +122,15 @@ ln -sv "$HOME/config/vscode/snippets" "$HOME/.config/Code/User/snippets"
 chsh -s /bin/bash # Make bash default shell
 echo $SHELL # Show current shell
 
+rm "$HOME/.bash_profile"
+ln -sv "$HOME/config/shell/.profile" "$HOME/.bash_profile"
+
+rm "$HOME/.bash_aliases"
+ln -sv "$HOME/config/shell/bash/.bash_aliases" "$HOME"
+
+rm "$HOME/.bashrc"
+ln -sv "$HOME/config/shell/bash/.bashrc" "$HOME"
+
 # zsh
 rm "$HOME/.zshrc"
 ln -sv "$HOME/config/shell/zsh/.zshrc" "$HOME"
