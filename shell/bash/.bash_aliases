@@ -132,7 +132,10 @@ git-branch-delete() {
 	git branch | grep "$1" | xargs git branch -d
 }
 
-# rust
+# Python
+alias source-venv='source .venv/bin/activate'
+
+# Rust
 alias f-nightly='cargo +nightly fmt'
 alias fmt='cargo fmt'
 alias fmt-all='cargo fmt --all'
