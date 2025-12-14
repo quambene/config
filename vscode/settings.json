@@ -86,5 +86,7 @@
     "dart.previewLsp": true,
     "dart.debugExternalPackageLibraries": false,
     "dart.previewUpdateImportsOnRename": true,
-    "markdown.extension.toc.updateOnSave": false
+    "markdown.extension.toc.updateOnSave": false,
+    "rewrap.autoWrap.enabled": true,
+    "rewrap.wrappingColumn": 80
 }
