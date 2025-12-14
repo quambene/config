@@ -132,8 +132,12 @@ git-branch-delete() {
 	git branch | grep "$1" | xargs git branch -d
 }
 
+# tmux
+alias tmux-split='tmux split-window -h'
+
 # Python
 alias source-venv='source .venv/bin/activate'
+alias venv-deactivate='deactivate'
 
 # Rust
 alias f-nightly='cargo +nightly fmt'
