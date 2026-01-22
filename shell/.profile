@@ -27,3 +27,6 @@ fi
 
 # Rust (package manager and other rust binaries)
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# vs code on macOS
+# export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
