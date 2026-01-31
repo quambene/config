@@ -3,6 +3,8 @@
     email = contact.quambene@gmail.com
 [core]
     pager = delta
+    # Use helix as editor instead of vim
+    # editor = hx
 [interactive]
     diffFilter = delta --color-only
 [delta]
