@@ -5,17 +5,39 @@ alias ...='cd ../..'
 alias datetime='date +"%Y-%m-%d %H:%M:%S %Z"'
 alias current_millis='date +%s%N | cut -b1-13'
 
-# fuzzy search on all directories in home directory sorted by nesting (deepest
-# directories last)
-fdf() {
+# fuzzy search on all directories sorted by nesting (deepest directories last)
+fd-dir() {
     local query="$1"
 
-    fd --type d --max-depth 4 . "$HOME" 2>/dev/null \
+    fd --type d --max-depth 6 . "$HOME" 2>/dev/null \
         | awk '{ print gsub("/", "/"), $0 }' \
         | sed 's|^\./||' \
         | sort -n \
         | cut -d' ' -f2- \
         | sk --tiebreak=index --exact --query="$query" --select-1 --exit-0
+}
+
+# fuzzy search on document's full path
+# show matches in file name first
+fd-doc-dir() {
+    local query="$1"
+
+    fd --type f -e md -e odt -e ods -e pdf -e epup -e djvu -e azw3 --max-depth 6 . "$HOME" 2>/dev/null \
+        | sk --tiebreak="-end,length" --case=ignore --exact --query="$query" --select-1 --exit-0
+}
+
+# fuzzy search on document's name
+fd-doc-name() {
+    local query="$1"
+    local DELIM=$'\x1f' # ASCII unit separator, unlikely to appear in filenames
+
+    # find files 
+    #   -> prefix each line with file name 
+    #   -> rank file name first, and then full path 
+    fd --type f -e md -e odt -e ods -e pdf -e epub -e djvu -e azw3 --max-depth 6 . "$HOME" 2>/dev/null \
+        | awk -F'/' '{fname=$NF; print fname " " $0}' \
+        | sk --delimiter="$DELIM" --with-nth="1,2" --tiebreak="begin,length" \
+         --case=ignore --exact --query="$query" --select-1 --exit-0
 }
 
 # change directory with fuzzy finder
@@ -24,7 +46,7 @@ cdf() {
     local query="$*"
     local dir
 
-    dir=$(fdf "$query")
+    dir=$(fd-dir "$query")
 
     if [ -n "$dir" ]; then
         cd "$dir" || exit
@@ -54,7 +76,7 @@ hxf() {
     local query="$*"
     local dir
 
-    dir=$(fdf "$query")
+    dir=$(fd-dir "$query")
 
     if [ -n "$dir" ]; then
         hx "$dir" || exit
@@ -67,7 +89,7 @@ codef() {
     local query="$*"
     local dir
 
-    dir=$(fdf "$query")
+    dir=$(fd-dir "$query")
 
     if [ -n "$dir" ]; then
         code "$dir" || exit
