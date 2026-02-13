@@ -30,3 +30,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # vs code on macOS
 # export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+### Cursor on macOS
+# export PATH="$PATH:/Applications/Cursor.app/Contents/Resources/app/bin"
