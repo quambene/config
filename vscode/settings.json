@@ -88,5 +88,11 @@
     "dart.previewUpdateImportsOnRename": true,
     "markdown.extension.toc.updateOnSave": false,
     "rewrap.autoWrap.enabled": true,
-    "rewrap.wrappingColumn": 80
+    "rewrap.wrappingColumn": 80,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true
+    },
+    "claudeCode.preferredLocation": "sidebar",
+    "claudeCode.selectedModel": "default"
 }
