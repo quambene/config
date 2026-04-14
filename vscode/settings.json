@@ -15,6 +15,9 @@
     "editor.detectIndentation": false,
     "editor.suggestSelection": "first",
     "editor.codeLens": true,
+    "editor.inlineSuggest.enabled": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
     "workbench.editor.wrapTabs": false,
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Default Light+",
@@ -89,7 +92,6 @@
     "markdown.extension.toc.updateOnSave": false,
     "rewrap.autoWrap.enabled": true,
     "rewrap.wrappingColumn": 80,
-    "editor.inlineSuggest.enabled": true,
     "github.copilot.enable": {
         "*": true
     },
