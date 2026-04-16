@@ -96,6 +96,19 @@ codef() {
     fi
 }
 
+# open project in cursor with fuzzy finder
+curf() {
+    # allow multiple arguments
+    local query="$*"
+    local dir
+
+    dir=$(fd-dir "$query")
+
+    if [ -n "$dir" ]; then
+        cursor "$dir" || exit
+    fi
+}
+
 find_file() {
     find . -iname "*$1*"
 }
