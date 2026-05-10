@@ -29,3 +29,6 @@ fi
 
 # Source z and zi commands for skims
 [ -f ~/.zoxide/zoxide.bash ] && source ~/.zoxide/zoxide.bash
+
+# Source completion for just
+eval "$(JUST_COMPLETE=bash just)"
