@@ -21,6 +21,7 @@
     "workbench.editor.wrapTabs": false,
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Default Light+",
+    "workbench.experimental.modernUI": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8",
         "editor.formatOnSave": true,
