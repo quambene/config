@@ -150,6 +150,8 @@ alias update-firmware='fwupdmgr update'
 alias start_cafe='caffeinate -dims'
 
 # git
+alias rebase-main='git pull --rebase origin main'
+alias rebase-master='git pull --rebase origin master'
 alias merge-dev='git merge --no-ff --no-commit dev'
 alias merge-master='git merge --no-ff --no-commit master'
 alias merge-main='git merge --no-ff --no-commit main'
