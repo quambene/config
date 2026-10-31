@@ -22,6 +22,12 @@
     "workbench.startupEditor": "none",
     "workbench.colorTheme": "Default Light+",
     "workbench.experimental.modernUI": false,
+    "git.showActionButton": {
+        "commit": false,
+        "publish": false,
+        "sync": false
+    },
+    "git.showCommitInput": false,
     "[python]": {
         "editor.defaultFormatter": "ms-python.autopep8",
         "editor.formatOnSave": true,
